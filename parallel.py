@@ -13,9 +13,7 @@ class Solver:
     @staticmethod
     def generate_matrix(size, value_range=(0, 9)):
         matrix = []
-        for _ in range(size):
-            row = [random.randint(*value_range) for _ in range(size)]
-            matrix.append(row)
+        matrix = [[random.randint(*value_range) for _ in range(size)] for _ in range(size)]
         return matrix
 
     def solve(self):
